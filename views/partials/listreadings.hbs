@@ -1,14 +1,16 @@
-<table>
+<table class="ui table">
   <thead>
     <th>Code</th>
     <th>Temp</th>
     <th>Wind Speed</th>
   </thead>
   <tbody>
+    {{#each stations.readings}}
     <tr>
-      <td>800</td>
-      <td>0.5</td>
-      <td>2.0</td>
+      <td>{{code}}</td>
+      <td>{{temp}}</td>
+      <td>{{windSpeed}}</td>
     </tr>
+    {{/each}}
   </tbody>
 </table>
