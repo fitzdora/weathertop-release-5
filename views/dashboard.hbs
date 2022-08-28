@@ -1,23 +1,27 @@
 {{> menu id="dashboard"}}
 
+{{#each stations}}
 <section class="ui segment">
   <h2 class="ui header">
-    {{o}}
+    {{title}}
   </h2>
 <table class="ui table">
   <thead>
     <th>Code</th>
     <th>Temp</th>
     <th>Wind Speed</th>
+    <th>Pressure</th>
   </thead>
   <tbody>
-    {{#each station.readings}}
+    {{#each readings}}
     <tr>
       <td>{{code}}</td>
       <td>{{temp}}</td>
       <td>{{windSpeed}}</td>
+      <td>{{pressure}}</td>
     </tr>
     {{/each}}
   </tbody>
 </table>
 </section>
+{{/each}}

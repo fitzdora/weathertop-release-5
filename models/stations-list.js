@@ -9,17 +9,20 @@ const tramore = {
     {
       code: 800,
       temp: 0.5,
-      windSpeed: 2.0
+      windSpeed: 2.0,
+      pressure: 4
     },
      {
       code: 900,
       temp: 0.5,
-      windSpeed: 6.0
+      windSpeed: 6.0,
+       pressure: 5
     },
     {
       code: 700,
       temp: 8.2,
-      windSpeed: 3.0
+      windSpeed: 3.0,
+      pressure: 7
     },
   ],
 };
@@ -30,17 +33,20 @@ const cobh = {
     {
       code: 300,
       temp: 3.4,
-      windSpeed: 5.0
+      windSpeed: 5.0,
+      pressure: 2
     },
      {
       code: 300,
       temp: 5.5,
-      windSpeed: 6.0
+      windSpeed: 6.0,
+       pressure: 9
     },
     {
       code: 400,
       temp: 2.2,
-      windSpeed: 9.0
+      windSpeed: 9.0,
+      pressure: 7
     },
   ],
 };
@@ -51,17 +57,20 @@ const waterford = {
     {
       code: 200,
       temp: 7.5,
-      windSpeed: 1.0
+      windSpeed: 1.0,
+      pressure: 2
     },
      {
       code: 300,
       temp: 0.2,
-      windSpeed: 7.0
+      windSpeed: 7.0,
+       pressure: 4
     },
     {
       code: 500,
       temp: 3.2,
-      windSpeed: 7.0
+      windSpeed: 7.0,
+      pressure: 7
     },
   ],
 };
