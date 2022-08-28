@@ -1,23 +1,7 @@
 "use strict";
 
 const logger = require("../utils/logger");
-
-const stationsList = {
-  title: 'Tramore',
-  readings: [
-    {
-      code: 800,
-      temp: 0.5,
-      windSpeed: 2.0
-    },
-     {
-      code: 900,
-      temp: 0.5,
-      windSpeed: 6.0
-    }
-    
-  ]
-}
+const stationsList = require("../models/stations-list.js")
 
 const dashboard = {
   index(request, response) {
@@ -26,7 +10,7 @@ const dashboard = {
       title: "Weathertop Dashboard",
       stations: stationsList
     };
-    logger.info('a')
+    logger.info('About to render', stationsList)
     response.render("dashboard", viewData);
   },
 };
