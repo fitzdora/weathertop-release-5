@@ -4,27 +4,10 @@
 <section class="ui segment">
   <h2 class="ui header">
     {{stationLocation}}
-    <p>
+  </h2>
+  <p>
       Lastest readings:
     </p>
-  </h2>
-<table class="ui table">
-  <thead>
-    <th>Code</th>
-    <th>Temp</th>
-    <th>Wind Speed</th>
-    <th>Pressure</th>
-  </thead>
-  <tbody>
-    {{#each readings}}
-    <tr>
-      <td>{{code}}</td>
-      <td>{{temp}}</td>
-      <td>{{windSpeed}}</td>
-      <td>{{pressure}}</td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
+<a href="/station/{{id}}">View</a>
 </section>
 {{/each}}
