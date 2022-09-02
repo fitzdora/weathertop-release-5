@@ -3,13 +3,13 @@
 const logger = require("../utils/logger");
 const fullStationsList = require("../models/stations-list.js");
 
-const stationslist = {
+const stationsList = {
   index (request, response){
     const viewData = {
       title: 'StationsList',
     };
-    response.render('stationslist', viewData);
+    response.render('stationlist', viewData);
   },
 };
 
-module.exports = stationslist;
+module.exports = stationsList;

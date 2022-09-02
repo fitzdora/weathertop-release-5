@@ -5,11 +5,11 @@ const router = express.Router();
 
 const dashboard = require("./controllers/dashboard.js");
 const about = require("./controllers/about.js");
-const stationlist = require("./controllers/stationlist.js");
+const stationslist = require("./controllers/stationslist.js");
 
 router.get("/", dashboard.index);
 router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
-router.get("/stationlist/:id", stationlist.index);
+router.get("/stationslist/:id", stationslist.index);
 
 module.exports = router;
