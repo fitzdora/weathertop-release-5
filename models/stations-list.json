@@ -1,15 +1,18 @@
 {
   "stationsList":[
     {
+      "id" : "01",
     "title": "Tramore",
     "readings": [
       {
+        "id": "03",
         "code": 300,
         "temp": 3.2,
         "windSpeed": 4.3,
         "pressure": 3 
       },
        {
+         "id": "04",
         "code": 500,
         "temp": 8.4,
         "windSpeed": 2.3,
@@ -18,15 +21,18 @@
     ]
     },
     {
+      "id": "02",
     "title": "Cobh",
     "readings": [
       {
+        "id": "05",
         "code": 500,
         "temp": 7.2,
         "windSpeed": 4.3,
         "pressure": 4
       },
        {
+         "id": "06",
         "code": 200,
         "temp": 6.4,
         "windSpeed": 8.3,
