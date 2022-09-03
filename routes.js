@@ -10,6 +10,6 @@ const stationslist = require("./controllers/stationslist.js");
 router.get("/", dashboard.index);
 router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
-router.get("/stationslist/:id", stationslist.index);
+router.get("/station/:id", stationslist.index);
 
 module.exports = router;
