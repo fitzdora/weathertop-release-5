@@ -10,6 +10,7 @@ const stationsList = {
     const viewData = {
       title: 'StationsList',
     };
+    logger.info('About to render', fullStationsList)
     response.render('stationslist', viewData);
   },
 };
