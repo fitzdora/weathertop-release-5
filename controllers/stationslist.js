@@ -6,11 +6,11 @@ const fullStationsList = require("../models/stations-list.js");
 const stationsList = {
   index (request, response){
     const stationsListId = request.params.id
-    logger.info('StationList ID = ' + stationListId);
+    logger.info('StationsList ID = ' + stationsListId);
     const viewData = {
       title: 'StationsList',
     };
-    response.render('stationlist', viewData);
+    response.render('stationslist', viewData);
   },
 };
 
