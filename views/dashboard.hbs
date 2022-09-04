@@ -1,7 +1,7 @@
 {{> menu id="dashboard"}}
 
 {{#each stations}}
-<section class="ui segment">
+<section class="ui raised segment">
   <h2 class="ui header">
     {{stationLocation}}
   </h2>
@@ -15,6 +15,7 @@
         <a class="header">Latest Readings</a>
       </div>
     </div>
+  </div>
   </div>
     <p>
     <a href="/stations/{{id}}">View</a>
