@@ -1,24 +1,5 @@
 {{> menu id="dashboard"}}
 
-{{#each stations}}
-<section class="ui raised segment">
-  <h2 class="ui header">
-    {{stationLocation}}
-  </h2>
-  <div class="ui three column grid">
-  <div class="column">
-    <div class="ui fluid card">
-      <div class="image">
-        <img src="https://cdn.glitch.global/f727149b-a932-44c0-b52a-8f249a5f2487/image.png?v=1662300380219">
-        </div>
-      <div class="content">
-        <a class="header">Latest Readings</a>
-      </div>
-    </div>
-  </div>
-  </div>
-    <p>
-    <a href="/stations/{{id}}">View</a>
-    </p>
+<section class ="ui raised inverted segment">
+{{> liststations}}
 </section>
-{{/each}}

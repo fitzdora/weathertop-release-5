@@ -14,15 +14,7 @@ stationsList: require("./stations-list.json").stationsList,
   },
   
   getStations(id){
-    let foundStations = null;
-    for (let stationsList of this.stationsList) {
-      if (id == stationsList.id){
-        foundStations = stationsList;
-      }
-    }
-    
-    return foundStations;
-    
+    return _.find(this.stationsList, { id: id});
   },
   
   removeReadings(id, readingsId){

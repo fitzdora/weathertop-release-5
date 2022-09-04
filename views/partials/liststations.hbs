@@ -1,0 +1,14 @@
+{{#each stations}}
+  <section class="ui stacked raised segment">
+    <h2 class="ui header">
+      {{stationLocation}}
+    </h2>
+    <p>Lastest Conditions</p>
+    <a href="/stations/{{id}}" class="ui icon button">
+      <i classs="icon folder open"></i>
+    </a>
+    <a href="/stations/{{id}}" class="ui icon button">
+      <i classs="icon trash"></i>
+    </a>
+  </section>
+{{/each}}
