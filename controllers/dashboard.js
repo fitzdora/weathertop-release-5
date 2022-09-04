@@ -1,7 +1,7 @@
 "use strict";
 
 const logger = require("../utils/logger");
-const fullStationsList = require("../models/stations-list.js")
+const fullStationsList = require("../models/stations-list")
 
 const dashboard = {
   index(request, response) {
