@@ -2,7 +2,7 @@
   "stationsList":[
     {
       "id" : "01",
-    "stations": "Tramore",
+    "stationLocation": "Tramore",
     "readings": [
       {
         "id": "03",
@@ -22,7 +22,7 @@
     },
     {
       "id": "02",
-    "stations": "Cobh",
+    "stationLocation": "Cobh",
     "readings": [
       {
         "id": "05",
