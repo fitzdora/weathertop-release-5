@@ -14,6 +14,13 @@ const stationsList = {
     logger.info('About to render', fullStationsList);
     response.render('stationslist', viewData);
   },
+  
+  deleteReadings(request, reponse){
+    const stationsListId = request.params.id;
+    const readingsId = request.params.readingsid;
+    logger.debug('Deleting Reading ${readingsid} from Stati')
+    
+  },
 };
 
 module.exports = stationsList;

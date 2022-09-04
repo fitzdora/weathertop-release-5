@@ -11,5 +11,6 @@ router.get("/", dashboard.index);
 router.get("/dashboard", dashboard.index);
 router.get("/about", about.index);
 router.get("/stations/:id", stationslist.index);
+router.get("/stations/:id/deletereadings/:readingsid", stationslist.deleteReading);
 
 module.exports = router;
