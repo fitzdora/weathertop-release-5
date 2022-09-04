@@ -13,8 +13,8 @@ stationsList: require("./stations-list.json").stationsList,
   
   getStations(id){
     let foundStations = null;
-    for (let stations of this.stationsList){
-      if (id == stations.id){
+    for (let stationslist of this.stationsList) {
+      if (id == stationslist.id){
         foundStations = stations;
       }
     }
