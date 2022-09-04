@@ -1,4 +1,3 @@
-{{#each stations}}
 <table class="ui table">
   <thead>
     <th>Code</th>
@@ -7,14 +6,13 @@
     <th>Pressure</th>
   </thead>
   <tbody>
-    {{#each stationsList.readings}}
+    {{#each stations.readings}}
     <tr>
-      <td>{{this.code}}</td>
-      <td>{{this.temp}}</td>
-      <td>{{this.windSpeed}}</td>
-      <td>{{this.pressure}}</td>
+      <td>{{code}}</td>
+      <td>{{temp}}</td>
+      <td>{{windSpeed}}</td>
+      <td>{{pressure}}</td>
     </tr>
     {{/each}}
   </tbody>
 </table>
-{{/each}}
