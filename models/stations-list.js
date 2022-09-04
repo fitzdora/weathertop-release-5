@@ -1,6 +1,8 @@
 "use strict";
 
-//const logger = require("../utils/logger");
+
+const _ = require('lodash');
+const logger = require("../utils/logger");
 
 const fullStationsList = {
 
@@ -22,6 +24,13 @@ stationsList: require("./stations-list.json").stationsList,
     return foundStations;
     
   },
+  
+  removeReadings(id, readingsId){
+    const stationsList = this.getStations(id);
+    _.remove(stationsList.readings, {id: readingsId});
+    
+  },
+  
 };
   
 module.exports = fullStationsList;
