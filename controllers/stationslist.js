@@ -9,7 +9,7 @@ const stationsList = {
     logger.info('StationsList ID = ' + stationsListId);
     const viewData = {
       title: 'StationsList',
-      stations: fullStationsList.getAllStations(stationsListId),
+      stations: fullStationsList.getStations(stationsListId),
     };
     logger.info('About to render', fullStationsList)
     response.render('stationslist', viewData);
