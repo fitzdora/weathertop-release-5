@@ -7,12 +7,12 @@
     <th>Pressure</th>
   </thead>
   <tbody>
-    {{#each readings}}
+    {{#each stationsList.readings}}
     <tr>
-      <td>{{code}}</td>
-      <td>{{temp}}</td>
-      <td>{{windSpeed}}</td>
-      <td>{{pressure}}</td>
+      <td>{{this.code}}</td>
+      <td>{{this.temp}}</td>
+      <td>{{this.windSpeed}}</td>
+      <td>{{this.pressure}}</td>
     </tr>
     {{/each}}
   </tbody>

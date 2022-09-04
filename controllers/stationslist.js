@@ -5,11 +5,11 @@ const fullStationsList = require("../models/stations-list");
 
 const stationsList = {
   index (request, response){
-    const stationsId = request.params.id
-    logger.info('Stations ID = ' + stationsId);
+    const stationsListId = request.params.id
+    logger.info('Stations ID = ' + stationsListId);
     const viewData = {
       title: 'StationsList',
-      stations: fullStationsList.getStations(stationsId),
+      stations: fullStationsList.getStations(stationsListId),
     };
     logger.info('About to render', fullStationsList)
     response.render('stationslist', viewData);
