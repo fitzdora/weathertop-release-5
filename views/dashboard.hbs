@@ -5,9 +5,19 @@
   <h2 class="ui header">
     {{stationLocation}}
   </h2>
-  <p>
-      Lastest readings:
+  <div class="ui three column grid">
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="/images/wireframe/image.png">
+        </div>
+      <div class="content">
+        <a class="header">Latest Readings</a>
+      </div>
+    </div>
+  </div>
+    <p>
+    <a href="/stations/{{id}}">View</a>
     </p>
-<a href="/stations/{{id}}">View</a>
 </section>
 {{/each}}

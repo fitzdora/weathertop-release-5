@@ -1,6 +1,13 @@
 "use strict";
 
 const logger = require("../utils/logger");
-const stationsList = require("./stations-list.json").stationsList;
+
+const fullStationsList = {
+
+stationsList: require("./stations-list.json").stationsList,
+  
+  get
+  
+  
 
 module.exports = stationsList;
