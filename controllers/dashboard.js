@@ -13,6 +13,13 @@ const dashboard = {
     logger.info('About to render', fullStationsList.getAllStations());
     response.render("dashboard", viewData);
   },
+  
+  deleteStations(request, response){
+    const stationsListId = request.params.id;
+    logger.debug('Deleting Stations ${stationsListId}');
+    fullStationsList.removeStations(stationsListId);
+    response.redirect('/dashboard');
+  },
 };
 
 module.exports = dashboard;

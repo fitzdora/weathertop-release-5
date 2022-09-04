@@ -2,7 +2,7 @@
 
 
 const _ = require('lodash');
-const logger = require("../utils/logger");
+//const logger = require("../utils/logger");
 
 const fullStationsList = {
 
@@ -20,6 +20,11 @@ stationsList: require("./stations-list.json").stationsList,
   removeReadings(id, readingsId){
     const stationsList = this.getStations(id);
     _.remove(stationsList.readings, {id: readingsId});
+    
+  },
+  
+  removeStations(id){
+    _.remove(this.stationsList, {id:id});
     
   },
   
