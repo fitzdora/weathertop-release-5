@@ -8,23 +8,23 @@ const fullStationsList = {
 
 stationsList: require("./stations-list.json").stationsList,
   
-  getAllStations(){
+  getAllStations() {
     
     return this.stationsList;
   },
   
-  getStations(id){
+  getStations(id) {
     return _.find(this.stationsList, { id: id});
   },
   
-  removeReadings(id, readingsId){
+  removeReadings(id, readingsId) {
     const stationsList = this.getStations(id);
     _.remove(stationsList.readings, {id: readingsId});
     
   },
   
-  removeStations(id){
-    _.remove(this.stationsList, {id:id});
+  removeStations(id) {
+    _.remove(this.stationsList, {id: id});
     
   },
   
