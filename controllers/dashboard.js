@@ -18,7 +18,7 @@ const dashboard = {
     const stationsListId = request.params.id;
     logger.debug('Deleting Stations ${stationsListId}');
     fullStationsList.removeStations(stationsListId);
-    response.redirect('/dashboard/');
+    response.redirect("/dashboard");
   },
 };
 
