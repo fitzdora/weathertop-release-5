@@ -20,7 +20,7 @@ const stationsList = {
     const readingsId = request.params.readingsid;
     logger.debug('Deleting Reading ${readingsid} from Stations ${stationsListId}');
     fullStationsList.removeReadings(stationsListId, readingsId);
-    reponse.redirect('stationslist/' + stationsListId);
+    reponse.redirect('/stations/' + stationsListId);
   },
 };
 
