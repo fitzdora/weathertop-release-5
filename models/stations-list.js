@@ -14,17 +14,17 @@ stationsList: require("./stations-list.json").stationsList,
   },
   
   getStations(id) {
-    return _.find(this.stationsList, { id: id});
+    return _.find(this.stationsList, { id: id });
   },
   
   removeReadings(id, readingsId) {
     const stationsList = this.getStations(id);
-    _.remove(stationsList.readings, {id: readingsId});
+    _.remove(stationsList.readings, { id: readingsId });
     
   },
   
   removeStations(id) {
-    _.remove(this.stationsList, {id: id});
+    _.remove(this.stationsList, { id: id });
     
   },
   
