@@ -15,7 +15,7 @@ const stationsList = {
     response.render('stationslist', viewData);
   },
   
-  deleteReadings(request, reponse){
+  deleteReadings(request, reponse) {
     const stationsListId = request.params.id;
     const readingsId = request.params.readingsid;
     logger.debug('Deleting Reading ${readingsid} from Stations ${stationsListId}');
