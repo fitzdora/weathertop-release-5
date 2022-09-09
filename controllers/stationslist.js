@@ -18,7 +18,7 @@ const stationsList = {
   deleteReadings(request, reponse) {
     const stationsListId = request.params.id;
     const readingsId = request.params.readingsid;
-    logger.debug('Deleting Reading ${readingsid} from Stations ${stationsListId}');
+    logger.debug(`Deleting Reading ${readingsId} from Stations ${stationsListId}`);
     fullStationsList.removeReadings(stationsListId, readingsId);
     reponse.redirect('/stations/' + stationsListId);
   },
