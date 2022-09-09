@@ -27,7 +27,17 @@ stationsList: require("./stations-list.json").stationsList,
     _.remove(this.stationsList, { id: id });
     
   },
-  
+
+  addReadings (id, readings) {
+    const stationsList = this.getStations(id);
+    stationsList.readings.push(readings);
+  },
+
+  addStations(stations){
+  this.stationsList.push(stations);
+  }
+
+
 };
   
 module.exports = fullStationsList;

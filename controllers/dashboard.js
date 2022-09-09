@@ -2,12 +2,13 @@
 
 const logger = require("../utils/logger");
 const fullStationsList = require("../models/stations-list");
+const uuid = require("uuid");
 
 const dashboard = {
   index(request, response) {
     logger.info("dashboard rendering");
     const viewData = {
-      title: "Weathertop Dashboard",
+      title: "Weather Top Dashboard",
       stations: fullStationsList.getAllStations(),
     };
     logger.info('About to render', fullStationsList.getAllStations());
@@ -19,6 +20,16 @@ const dashboard = {
     logger.debug(`Deleting Stations ${stationsListId}`);
     fullStationsList.removeStations(stationsListId);
     response.redirect("/dashboard");
+  },
+
+  addStations(request, response){
+    const newStation = {
+      id: uuid.v1(),
+      stations: request.body.stationsList,
+      readings: [],
+    };
+    fullStationsList.addStations(newStation);
+    response.redirect('/dashboard');
   }
 };
 
