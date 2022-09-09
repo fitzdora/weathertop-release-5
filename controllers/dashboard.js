@@ -25,9 +25,10 @@ const dashboard = {
   addStations(request, response){
     const newStation = {
       id: uuid.v1(),
-      stations: request.body.stationsList,
+      stationLocation: request.body.stationLocation,
       readings: [],
     };
+    logger.debug('New Station Location =', newStation);
     fullStationsList.addStations(newStation);
     response.redirect('/dashboard');
   }

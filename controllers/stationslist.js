@@ -24,21 +24,22 @@ const stationsList = {
     response.redirect('/stations/' + stationsListId);
   },
 
-  addReadings (request, response){
+  addReadings: function(request, response) {
     const stationsListId = request.params.id;
-    const stations = fullStationsList.getStations(stationsListId);
+    const stationsList = fullStationsList.getStations(stationsListId);
     //system not liking above variable for some reason
     const newReadings = {
       //this should refer to field values
       id: uuid.v1(),
-      code: request.body.code,
-      temp: request.body.temp,
-      windSpeed: request.body.windSpeed,
-      pressure: request.body.pressure,
+      code: Number(request.body.code),
+      temp: Number(request.body.temp),
+      windSpeed: Number(request.body.windSpeed),
+      pressure: Number(request.body.pressure)
     };
+    logger.debug('New Readings = ', newReadings);
     fullStationsList.addReadings(stationsListId, newReadings);
     response.redirect('/stations/' + stationsListId);
-  },
+  }
 
 };
 

@@ -2,10 +2,12 @@
 
 
 const _ = require('lodash');
+const JsonStore = require('./json-store');
 //const logger = require("../utils/logger");
 
 const fullStationsList = {
 
+store: new JsonStore('./models/stations-list.json', {fullStationsList:  []}),
 stationsList: require("./stations-list.json").stationsList,
   
   getAllStations() {
@@ -28,16 +30,14 @@ stationsList: require("./stations-list.json").stationsList,
     
   },
 
-  addReadings (id, readings) {
+  addReadings (id, reading) {
     const stationsList = this.getStations(id);
-    stationsList.readings.push(readings);
+    stationsList.readings.push(reading);
   },
 
-  addStations(stations){
-  this.stationsList.push(stations);
+  addStations(stationLocation){
+  this.stationsList.push(stationLocation);
   }
-
-
 };
   
 module.exports = fullStationsList;
