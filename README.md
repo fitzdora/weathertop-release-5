@@ -1,7 +1,5 @@
-Welcome to the Glitch Template
+Welcome Weather Top 
 ==============================
 
-A starter project for learning Glitch.
-
-This is an Express.js project, designed to work well with the Glitch development environment. It includes basic express setup, templating, routing, JSON based model and session support.
-
+This is a little Weather App based on Javascript, Handlebars, at times Glitch, at times Webstorm (from Version 4 onwards)
+I hope to continue to use this version until the final hand-in as I am getting a bit confused....and at times the computer just says no!
