@@ -15,12 +15,12 @@ const stationsList = {
     response.render('stationslist', viewData);
   },
   
-  deleteReadings(request, reponse) {
+  deleteReadings(request, response) {
     const stationsListId = request.params.id;
     const readingsId = request.params.readingsid;
     logger.debug(`Deleting Reading ${readingsId} from Stations ${stationsListId}`);
     fullStationsList.removeReadings(stationsListId, readingsId);
-    reponse.redirect('/stations/' + stationsListId);
+    response.redirect('/stations/' + stationsListId);
   },
 };
 
