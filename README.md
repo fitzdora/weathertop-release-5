@@ -1,7 +1,6 @@
-Welcome to the Glitch Template
+Weather Top Release Version 5
 ==============================
 
-A starter project for learning Glitch.
-
-This is an Express.js project, designed to work well with the Glitch development environment. It includes basic express setup, templating, routing, JSON based model and session support.
+This is now the working Webstorm version taking from Glitch at Version 4 
+Currently in the process of adding Stations and Readings.
 
