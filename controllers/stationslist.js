@@ -34,7 +34,8 @@ const stationsList = {
       code: Number(request.body.code),
       temp: Number(request.body.temp),
       windSpeed: Number(request.body.windSpeed),
-      pressure: Number(request.body.pressure)
+      pressure: Number(request.body.pressure),
+      windDirection: Number(request.body.windDirection)
     };
     logger.debug('New Readings = ', newReadings);
     fullStationsList.addReadings(stationsListId, newReadings);

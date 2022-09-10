@@ -9,21 +9,16 @@
           "code": 300,
           "temp": 3.2,
           "windSpeed": 4.3,
-          "pressure": 3
+          "pressure": 3,
+          "windDirection": 120
         },
         {
           "id": "04",
           "code": 500,
           "temp": 8.4,
           "windSpeed": 2.3,
-          "pressure": 6
-        },
-        {
-          "id": "ceb78b90-310b-11ed-a4ff-63cb3bf3b698",
-          "code": 500,
-          "temp": 3,
-          "windSpeed": 5,
-          "pressure": 4
+          "pressure": 6,
+          "windDirection": 90
         }
       ]
     },
@@ -36,7 +31,22 @@
           "code": 400,
           "temp": 3,
           "windSpeed": 4,
-          "pressure": 3
+          "pressure": 3,
+          "windDirection": 160
+        }
+      ]
+    },
+    {
+      "id": "da4e39a0-3114-11ed-9c4a-217ec0e9ed20",
+      "stationLocation": "Cobh",
+      "readings": [
+        {
+          "id": "ed8cfba0-3114-11ed-9c4a-217ec0e9ed20",
+          "code": 500,
+          "temp": 5,
+          "windSpeed": 6,
+          "pressure": 5,
+          "windDirection": 130
         }
       ]
     }
