@@ -47,6 +47,9 @@ collection: 'stationsList',
     _.remove(readings, { id: readingsId });
     this.store.save();
   },
+  getUserStations(userid){
+  return this.store.findBy(this.collection, { userid: userid });
+  },
 };
   
 module.exports = fullStationsList;
