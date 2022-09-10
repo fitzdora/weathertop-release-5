@@ -3,19 +3,19 @@
     <div class="field">
       <label>Weather Code</label>
       <label>
-        <input placeholder="Code" type="number" name="code">
+        <input placeholder="Code" type="number" name="code" step="100" min="100" max="800">
       </label>
     </div>
     <div class="field">
-      <label>Temperature</label>
+      <label>Temperature (Celsius)</label>
       <label>
-        <input placeholder="Temp" type="number" name="temp">
+        <input placeholder="Temp" type="number" name="temp" step="0.01" min="-12" max="60">
       </label>
     </div>
     <div class="field">
       <label>Wind Speed</label>
       <label>
-        <input placeholder="Wind Speed" type="number" name="windSpeed">
+        <input placeholder="Wind Speed" type="number" name="windSpeed" step="0.01" min="0" max="120">
       </label>
     </div>
     <div class="field">
@@ -27,7 +27,7 @@
     <div class="field">
       <label>Wind Direction</label>
       <label>
-        <input placeholder="Wind Direction" type="number" name="windDirection">
+        <input placeholder="Wind Direction" type="number" name="windDirection" step="0.01" min="0" max="360">
       </label>
     </div>
   </div>

@@ -1,4 +1,26 @@
 {
   "stationsList": [
+    {
+      "id": "7b1a1770-3122-11ed-bdc8-e37a0f641639",
+      "stationLocation": "Cork",
+      "readings": [
+        {
+          "id": "88f7be60-3122-11ed-bdc8-e37a0f641639",
+          "code": 400,
+          "temp": 4,
+          "windSpeed": 5,
+          "pressure": 5,
+          "windDirection": 344
+        },
+        {
+          "id": "613a4ae0-3123-11ed-b82d-21bd3e186c49",
+          "code": 500,
+          "temp": 4.5,
+          "windSpeed": 3.6,
+          "pressure": 7,
+          "windDirection": 229.99
+        }
+      ]
+    }
   ]
 }
