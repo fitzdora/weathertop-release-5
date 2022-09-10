@@ -7,37 +7,46 @@ const JsonStore = require('./json-store');
 
 const fullStationsList = {
 
-store: new JsonStore('./models/stations-list.json', {fullStationsList:  []}),
-stationsList: require("./stations-list.json").stationsList,
+store: new JsonStore('./models/stations-list.json', {stationsList:  [] }),
+collection: 'stationsList',
   
   getAllStations() {
     
-    return this.stationsList;
+    return this.store.findAll(this.collection);
   },
   
   getStations(id) {
-    return _.find(this.stationsList, { id: id });
+    return this.store.findOneBy(this.collection, { id: id });
   },
-  
-  removeReadings(id, readingsId) {
-    const stationsList = this.getStations(id);
-    _.remove(stationsList.readings, { id: readingsId });
-    
+
+  addStations(stationsList){
+    this.store.add(this.collection, stationsList);
+    this.store.save();
   },
-  
+
   removeStations(id) {
-    _.remove(this.stationsList, { id: id });
-    
+    const stationsList = this.getStations(id);
+    this.store.remove(this.collection, stationsList);
+    this.store.save();
+  },
+
+  removeAllStations(){
+    this.store.removeAll(this.collection);
+    this.store.save();
   },
 
   addReadings (id, reading) {
     const stationsList = this.getStations(id);
     stationsList.readings.push(reading);
+    this.store.save();
   },
 
-  addStations(stationLocation){
-  this.stationsList.push(stationLocation);
-  }
+  removeReadings(id, readingsId) {
+    const stationsList = this.getStations(id);
+    const readings = stationsList.readings;
+    _.remove(readings, { id: readingsId });
+    this.store.save();
+  },
 };
   
 module.exports = fullStationsList;
