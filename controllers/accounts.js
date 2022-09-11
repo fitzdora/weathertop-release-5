@@ -1,35 +1,35 @@
-'use strict';
+"use strict";
 
-const userstore = require('../models/user-store');
-const logger = require('../utils/logger');
-const uuid = require('uuid');
+const userstore = require("../models/user-store");
+const logger = require("../utils/logger");
+const uuid = require("uuid");
 
 const accounts = {
 
   index(request, response) {
     const viewData = {
-      title: 'Login or Signup',
+      title: "Login or Signup"
     };
-    response.render('index', viewData);
+    response.render("index", viewData);
   },
 
   login(request, response) {
     const viewData = {
-      title: 'Login to the Service',
+      title: "Login to the Service"
     };
-    response.render('login', viewData);
+    response.render("login", viewData);
   },
 
   logout(request, response) {
-    response.cookie('stations', '');
-    response.redirect('/');
+    response.cookie("stations", "");
+    response.redirect("/");
   },
 
   signup(request, response) {
     const viewData = {
-      title: 'Login to the Service',
+      title: "Login to the Service"
     };
-    response.render('signup', viewData);
+    response.render("signup", viewData);
   },
 
   register(request, response) {
@@ -37,23 +37,23 @@ const accounts = {
     user.id = uuid.v1();
     userstore.addUser(user);
     logger.info(`registering ${user.email}`);
-    response.redirect('/');
+    response.redirect("/");
   },
 
   authenticate(request, response) {
     const user = userstore.getUserByPassword(request.body.password);
     if (user) {
-      response.cookie('stations', user.password);
+      response.cookie("stations", user.password);
       logger.info(`logging in ${user.password}`);
-      response.redirect('/dashboard');
+      response.redirect("/dashboard");
     } else {
-      response.redirect('/login');
+      response.redirect("/login");
     }
   },
 
   getCurrentUser(request) {
     const userPassword = request.cookies.stations;
     return userstore.getUserByPassword(userPassword);
-  },
+  }
 };
 module.exports = accounts;

@@ -6,31 +6,31 @@ const fullStationsList = require("../models/stations-list");
 const uuid = require("uuid");
 
 const stationsList = {
-  index (request, response){
+  index(request, response) {
     const stationsListId = request.params.id;
-    logger.debug('Stations ID = ' + stationsListId);
+    logger.debug("Stations ID = " + stationsListId);
 
     //call to stationAnalytics Method (to be changed)
     //const stationsList = fullStationsList.getStations(stationsListId);
     //const lowestPressure = stationAnalytics.getLowestPressure(stationsList);
-   // console.log(lowestPressure);
+    // console.log(lowestPressure);
 
     const viewData = {
-      title: 'StationsList',
-      stations: fullStationsList.getStations(stationsListId),
+      title: "StationsList",
+      stations: fullStationsList.getStations(stationsListId)
       //this is the pass to the view
       //lowestPressure: lowestPressure
     };
-    logger.info('About to render', fullStationsList);
-    response.render('stationslist', viewData);
+    logger.info("About to render", fullStationsList);
+    response.render("stationslist", viewData);
   },
-  
+
   deleteReadings(request, response) {
     const stationsListId = request.params.id;
     const readingsId = request.params.readingsid;
     logger.debug(`Deleting Reading ${readingsId} from Stations ${stationsListId}`);
     fullStationsList.removeReadings(stationsListId, readingsId);
-    response.redirect('/stations/' + stationsListId);
+    response.redirect("/stations/" + stationsListId);
   },
 
   addReadings: function(request, response) {
@@ -46,9 +46,9 @@ const stationsList = {
       pressure: Number(request.body.pressure),
       windDirection: Number(request.body.windDirection)
     };
-    logger.debug('New Readings = ', newReadings);
+    logger.debug("New Readings = ", newReadings);
     fullStationsList.addReadings(stationsListId, newReadings);
-    response.redirect('/stations/' + stationsListId);
+    response.redirect("/stations/" + stationsListId);
   }
 
 };

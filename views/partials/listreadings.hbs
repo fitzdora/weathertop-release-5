@@ -1,13 +1,13 @@
 <table class="ui table">
   <thead>
-    <th>Weather Code</th>
-    <th>Temperature</th>
-    <th>Wind Speed</th>
-    <th>Pressure</th>
-    <th>Wind Direction</th>
+  <th>Weather Code</th>
+  <th>Temperature</th>
+  <th>Wind Speed</th>
+  <th>Pressure</th>
+  <th>Wind Direction</th>
   </thead>
   <tbody>
-    {{#each stations.readings}}
+  {{#each stations.readings}}
     <tr>
       <td>{{code}}</td>
       <td>{{temp}}</td>
@@ -21,6 +21,6 @@
         <i class="icon trash"></i>
       </a></td>
     </tr>
-    {{/each}}
+  {{/each}}
   </tbody>
 </table>

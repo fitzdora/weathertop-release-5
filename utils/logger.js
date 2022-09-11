@@ -7,7 +7,7 @@ const logger = createLogger({
     //      timestamp(),
     prettyPrint()
   ),
-  transports: [new transports.Console()],
+  transports: [new transports.Console()]
 });
 
 module.exports = logger;

@@ -1,6 +1,7 @@
 {{> menu}}
 
-<form class="ui stacked raised segment form" action="/readings/{{stations.id}}/updatereadings/{{readings.id}}" method="POST">
+<form class="ui stacked raised segment form" action="/readings/{{stations.id}}/updatereadings/{{readings.id}}"
+      method="POST">
   <div class="five fields">
     <div class="field">
       <label>Weather Code</label>
@@ -17,7 +18,8 @@
     <div class="field">
       <label>Wind Speed</label>
       <label>
-        <input placeholder="Wind Speed" type="number" name="windSpeed" step="0.01" min="0" max="120" value="{{readings.windSpeed}}">
+        <input placeholder="Wind Speed" type="number" name="windSpeed" step="0.01" min="0" max="120"
+               value="{{readings.windSpeed}}">
       </label>
     </div>
     <div class="field">
@@ -29,7 +31,8 @@
     <div class="field">
       <label>Wind Direction</label>
       <label>
-        <input placeholder="Wind Direction" type="number" name="windDirection" step="0.01" min="0" max="360" value="{{readings.windDirection}}">
+        <input placeholder="Wind Direction" type="number" name="windDirection" step="0.01" min="0" max="360"
+               value="{{readings.windDirection}}">
       </label>
     </div>
   </div>

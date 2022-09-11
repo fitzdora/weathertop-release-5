@@ -16,4 +16,4 @@ const stationAnalytics = {
     }
   };*/
 
-module.exports = stationAnalytics;
+  module.exports = stationAnalytics;

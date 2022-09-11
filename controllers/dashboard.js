@@ -13,12 +13,12 @@ const dashboard = {
     const loggedInUser = accounts.getCurrentUser(request);
     const viewData = {
       title: "Weather Top Dashboard",
-      stations: fullStationsList.getUserStations(loggedInUser.id),
+      stations: fullStationsList.getUserStations(loggedInUser.id)
     };
-    logger.info('About to render', fullStationsList.getAllStations());
+    logger.info("About to render", fullStationsList.getAllStations());
     response.render("dashboard", viewData);
   },
-  
+
   deleteStations(request, response) {
     const stationsListId = request.params.id;
     logger.debug(`Deleting Stations ${stationsListId}`);
@@ -26,20 +26,20 @@ const dashboard = {
     response.redirect("/dashboard");
   },
 
-  addStations(request, response){
+  addStations(request, response) {
     const loggedInUser = accounts.getCurrentUser(request);
     const newStation = {
       id: uuid.v1(),
       userid: loggedInUser.id,
       stationLocation: request.body.stationLocation,
-      readings: [],
+      readings: []
     };
-    logger.debug('Creating a new Station Location =', newStation);
+    logger.debug("Creating a new Station Location =", newStation);
     fullStationsList.addStations(newStation);
-    response.redirect('/dashboard');
+    response.redirect("/dashboard");
   },
 
-  async addReport(request, response){
+  async addReport(request, response) {
     logger.info("rendering new report");
     let report = {};
     const result = await axios.get(oneCallRequest);
