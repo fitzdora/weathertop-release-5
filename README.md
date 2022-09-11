@@ -3,7 +3,7 @@
 /**
 **Name :** Isadora Fitzgerald
 ****Student Number:** W20099887
-VideoLink:** 
+VideoLink: https://youtu.be/eDnno0FHiQM** 
 
 **Brief description of the App developed 1/2 sentences:**
 
@@ -11,7 +11,7 @@ VideoLink:**
 
 **__Known bugs/problems:__**
 
-**Issue 1 Main issue is I never got to work out Station Analytics so I did no get the conversion to Fahranheit, Beaufort Scale, Weather Code, Wind Chill and Compass completed not amind started.**
+**Issue 1 Main issue is I never got to work out Station Analytics so I did not get the conversion to Fahranheit, Beaufort Scale, Weather Code, Wind Chill and Compass completed, not a mind even started.**
 
 **Issue 2 - I cannot edit the existing readings. I wanted to work this area out before attempting members editing their personal email**
 **Issue 3 - I jumped ahead as I was running out of time and tried to incorporate an Auto Read (Release 4) from OpenWeatherMap Api I was unable to complete this and just kept within the confines of the working model as I ran out of time to troubleshoot**
@@ -20,10 +20,8 @@ VideoLink:**
 **Any sources referred to during the development of the assignment (be precise and specific with references) {there no need to reference lecture/lab materials}:**
 
 **Images:**
-Rainbow Image by https://pixabay.com/photos/rainbow-cloud-evening-sun-rain-4047523/
-Lightning Image by https://pixabay.com/photos/lightning-storm-sea-clouds-sky-7166580/
-Semantics UI icon Images on the about pages
+Semantics UI icon Images on the about page
 
 **Other Source**
-I kept strictly to collage labs as I was unable to start this project until mid August and ran out of time to do proper research around it.
+I kept strictly to collage labs as I was unable to start this project until mid August due to work and family commitments, and so ran out of time to do proper research around it.
 

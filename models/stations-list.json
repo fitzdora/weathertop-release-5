@@ -72,14 +72,6 @@
           "windSpeed": 4.5,
           "pressure": 5,
           "windDirection": 145
-        },
-        {
-          "id": "c7b41f00-31b7-11ed-b53f-63024a157322",
-          "code": 200,
-          "temp": 5.3,
-          "windSpeed": 4.5,
-          "pressure": 2,
-          "windDirection": 100
         }
       ]
     },
@@ -88,6 +80,21 @@
       "userid": "117ffa60-31a8-11ed-86d0-b365e24df383",
       "stationLocation": "Kinsale",
       "readings": []
+    },
+    {
+      "id": "c86bd8d0-3210-11ed-8741-c705b0e15603",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationLocation": "Dumore East",
+      "readings": [
+        {
+          "id": "d1943510-3210-11ed-8741-c705b0e15603",
+          "code": 400,
+          "temp": 4.5,
+          "windSpeed": 5.7,
+          "pressure": 5,
+          "windDirection": 0
+        }
+      ]
     }
   ]
 }

@@ -27,6 +27,13 @@
       "email": "bart@simpson.com",
       "password": "secret",
       "id": "117ffa60-31a8-11ed-86d0-b365e24df383"
+    },
+    {
+      "firstName": "isadora",
+      "lastName": "fitzgerald",
+      "email": "isadora@isadora.com",
+      "password": "secret",
+      "id": "b3342d00-3210-11ed-8741-c705b0e15603"
     }
   ]
 }
