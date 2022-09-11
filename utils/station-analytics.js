@@ -2,18 +2,18 @@
 
 const stationAnalytics = {
 
-  getLowestPressure(stationsList) {
-    let lowestPressure = null;
-    if(stationsList.readings.length > 0) {
-      lowestPressure = stationsList.readings[0];
-     for (let i =1; i < stationsList.readings.length; i++) {
-      if (stationsList.readings[i].pressure < lowestPressure.pressure) {
-      lowestPressure = stationsList.readings[i];
+  /*  getLowestPressure(stationList){
+      let lowestPressure = null;
+      if (stationList.readings.length > 0){
+        lowestPressure = stationList.readings[0];
+        for (let i = 1; i < stationList.readings.length; i++){
+          if (stationList.readings[i].pressure < lowestPressure.pressure){
+            lowestPressure = stationList.readings[i];
+          }
+        }
+      }
+      return lowestPressure;
     }
-  }
-}
-return lowestPressure;
-}
-};
+  };*/
 
 module.exports = stationAnalytics;

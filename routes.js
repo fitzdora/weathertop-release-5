@@ -32,4 +32,6 @@ router.post("/stations/:id/addreadings", stationslist.addReadings);
 router.get("/readings/:id/editreadings/:readingsid", readings.index);
 router.post("/readings/:id/updatereadings/:readingsid", readings.update);
 
+router.post("/dashboard/addreport", dashboard.addReport);
+
 module.exports = router;

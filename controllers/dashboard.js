@@ -4,6 +4,8 @@ const logger = require("../utils/logger");
 const fullStationsList = require("../models/stations-list");
 const uuid = require("uuid");
 const accounts = require("./accounts.js");
+const axios = require("axios");
+const oneCallRequest = `http://api.openweathermap.org/data/2.5/weather?q=Tromsø,NO&appid=b64beb976199c407ebc92add9ca6c10e`;
 
 const dashboard = {
   index(request, response) {
@@ -35,6 +37,26 @@ const dashboard = {
     logger.debug('Creating a new Station Location =', newStation);
     fullStationsList.addStations(newStation);
     response.redirect('/dashboard');
+  },
+
+  async addReport(request, response){
+    logger.info("rendering new report");
+    let report = {};
+    const result = await axios.get(oneCallRequest);
+    if (result.status == 200) {
+      const reading = result.data.current;
+      report.code = reading.weather[0].id;
+      report.temp = reading.temp;
+      report.windSpeed = reading.wind_speed;
+      report.pressure = reading.pressure;
+      report.windDirection = reading.wind_Deg;
+    }
+    console.log(report);
+    const viewData = {
+      title: "Weather Report",
+      reading: report
+    };
+    response.render("dashboards", viewData);
   }
 };
 

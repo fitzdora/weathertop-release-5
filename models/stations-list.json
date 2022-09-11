@@ -34,6 +34,14 @@
           "windSpeed": 3.4,
           "pressure": 4,
           "windDirection": 123
+        },
+        {
+          "id": "d9aeb6b0-3203-11ed-8182-932b03b5fce1",
+          "code": 300,
+          "temp": 4.5,
+          "windSpeed": 3.4,
+          "pressure": 4,
+          "windDirection": 345
         }
       ]
     },
@@ -79,12 +87,6 @@
       "id": "1db43710-31a8-11ed-86d0-b365e24df383",
       "userid": "117ffa60-31a8-11ed-86d0-b365e24df383",
       "stationLocation": "Kinsale",
-      "readings": []
-    },
-    {
-      "id": "d4181e40-31b7-11ed-b53f-63024a157322",
-      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
-      "stationLocation": "Dungarvan",
       "readings": []
     }
   ]

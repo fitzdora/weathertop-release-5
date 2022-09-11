@@ -1,7 +1,7 @@
 "use strict";
 
 const logger = require("../utils/logger");
-const stationAnalytics =("../utils/station-analytics");
+//const stationAnalytics =("../utils/station-analytics");
 const fullStationsList = require("../models/stations-list");
 const uuid = require("uuid");
 
@@ -11,15 +11,15 @@ const stationsList = {
     logger.debug('Stations ID = ' + stationsListId);
 
     //call to stationAnalytics Method (to be changed)
-    const stationsList = fullStationsList.getStations(stationsListId);
-    const lowestPressure = stationAnalytics.getLowestPressure(stationsList);
-    console.log(lowestPressure);
+    //const stationsList = fullStationsList.getStations(stationsListId);
+    //const lowestPressure = stationAnalytics.getLowestPressure(stationsList);
+   // console.log(lowestPressure);
 
     const viewData = {
       title: 'StationsList',
       stations: fullStationsList.getStations(stationsListId),
       //this is the pass to the view
-      lowestPressure: lowestPressure
+      //lowestPressure: lowestPressure
     };
     logger.info('About to render', fullStationsList);
     response.render('stationslist', viewData);
@@ -36,9 +36,9 @@ const stationsList = {
   addReadings: function(request, response) {
     const stationsListId = request.params.id;
     const stationsList = fullStationsList.getStations(stationsListId);
-    //system not liking above variable for some reason
+    //system not liking above variable for some reason - seem to work fine without it.
     const newReadings = {
-      //this should refer to field values
+      //this refers to field values
       id: uuid.v1(),
       code: Number(request.body.code),
       temp: Number(request.body.temp),
