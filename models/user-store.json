@@ -13,6 +13,20 @@
       "email": "marge@simpson.com",
       "password": "secret",
       "id": "2b6f0989-7v7f-4a38-aa06b922d751"
+    },
+    {
+      "firstName": "lisa",
+      "lastName": "simpson",
+      "email": "lisa@simpson.com",
+      "password": "secret",
+      "id": "e822e540-3127-11ed-bc37-89263109737e"
+    },
+    {
+      "firstName": "bart",
+      "lastName": "simpson",
+      "email": "bart@simpson.com",
+      "password": "secret",
+      "id": "117ffa60-31a8-11ed-86d0-b365e24df383"
     }
   ]
 }

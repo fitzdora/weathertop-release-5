@@ -19,7 +19,7 @@ collection: 'stationsList',
     return this.store.findOneBy(this.collection, { id: id });
   },
 
-  addStations(stationsList){
+  addStations(stationsList) {
     this.store.add(this.collection, stationsList);
     this.store.save();
   },
@@ -30,7 +30,7 @@ collection: 'stationsList',
     this.store.save();
   },
 
-  removeAllStations(){
+  removeAllStations() {
     this.store.removeAll(this.collection);
     this.store.save();
   },
@@ -41,15 +41,31 @@ collection: 'stationsList',
     this.store.save();
   },
 
+  getReadings(id, readingsId) {
+    const stationsList = this.store.findOneBy(this.collection, { id: id });
+    const readings = stationsList.readings.filter(readings => readings.id == readingsId);
+    return readings[0];
+  },
+
+  updateReadings(readings, updatedReadings) {
+    readings.code = updatedReadings.code;
+    readings.temp = updatedReadings.temp;
+    readings.windSpeed = updatedReadings.windSpeed;
+    readings.pressure = updatedReadings.pressure;
+    readings.windDirection = updatedReadings.windDirection;
+    this.store.save();
+  },
+
   removeReadings(id, readingsId) {
     const stationsList = this.getStations(id);
     const readings = stationsList.readings;
     _.remove(readings, { id: readingsId });
     this.store.save();
   },
-  getUserStations(userid){
+  getUserStations(userid) {
   return this.store.findBy(this.collection, { userid: userid });
   },
+
 };
   
 module.exports = fullStationsList;

@@ -24,6 +24,11 @@ const userStore = {
   getUserByEmail(email) {
     return this.store.findOneBy(this.collection, { email: email });
   },
+
+  getUserByPassword(password) {
+    return this.store.findOneBy(this.collection, { password: password});
+  },
+
 };
 
 module.exports = userStore;

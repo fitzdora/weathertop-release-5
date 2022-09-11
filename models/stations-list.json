@@ -21,6 +21,71 @@
           "windDirection": 229.99
         }
       ]
+    },
+    {
+      "id": "e136ef00-3128-11ed-8af9-a3bac25eca3e",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationLocation": "Cork",
+      "readings": [
+        {
+          "id": "eeef33a0-3128-11ed-8af9-a3bac25eca3e",
+          "code": 400,
+          "temp": 2.3,
+          "windSpeed": 3.4,
+          "pressure": 4,
+          "windDirection": 123
+        }
+      ]
+    },
+    {
+      "id": "fe5e28f0-3128-11ed-8af9-a3bac25eca3e",
+      "userid": "2b6f0989-7v7f-4a38-aa06b922d751",
+      "stationLocation": "Tremor",
+      "readings": [
+        {
+          "id": "06557f40-3129-11ed-8af9-a3bac25eca3e",
+          "code": 500,
+          "temp": 4.5,
+          "windSpeed": 2.4,
+          "pressure": 6,
+          "windDirection": 234
+        }
+      ]
+    },
+    {
+      "id": "ed79df00-31a7-11ed-86d0-b365e24df383",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationLocation": "Tramore ",
+      "readings": [
+        {
+          "id": "ff31b2e0-31a7-11ed-86d0-b365e24df383",
+          "code": 200,
+          "temp": 12.4,
+          "windSpeed": 4.5,
+          "pressure": 5,
+          "windDirection": 145
+        },
+        {
+          "id": "c7b41f00-31b7-11ed-b53f-63024a157322",
+          "code": 200,
+          "temp": 5.3,
+          "windSpeed": 4.5,
+          "pressure": 2,
+          "windDirection": 100
+        }
+      ]
+    },
+    {
+      "id": "1db43710-31a8-11ed-86d0-b365e24df383",
+      "userid": "117ffa60-31a8-11ed-86d0-b365e24df383",
+      "stationLocation": "Kinsale",
+      "readings": []
+    },
+    {
+      "id": "d4181e40-31b7-11ed-b53f-63024a157322",
+      "userid": "3ad52697-6d98-4d80-8273-084de55a86c0",
+      "stationLocation": "Dungarvan",
+      "readings": []
     }
   ]
 }

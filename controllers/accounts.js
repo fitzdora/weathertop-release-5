@@ -41,10 +41,10 @@ const accounts = {
   },
 
   authenticate(request, response) {
-    const user = userstore.getUserByEmail(request.body.email);
+    const user = userstore.getUserByPassword(request.body.password);
     if (user) {
-      response.cookie('stations', user.email);
-      logger.info(`logging in ${user.email}`);
+      response.cookie('stations', user.password);
+      logger.info(`logging in ${user.password}`);
       response.redirect('/dashboard');
     } else {
       response.redirect('/login');
@@ -52,8 +52,8 @@ const accounts = {
   },
 
   getCurrentUser(request) {
-    const userEmail = request.cookies.stations;
-    return userstore.getUserByEmail(userEmail);
+    const userPassword = request.cookies.stations;
+    return userstore.getUserByPassword(userPassword);
   },
 };
 module.exports = accounts;
