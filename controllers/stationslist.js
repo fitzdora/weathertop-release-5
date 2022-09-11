@@ -1,6 +1,7 @@
 "use strict";
 
 const logger = require("../utils/logger");
+const stationAnalytics =("../utils/station-analytics");
 const fullStationsList = require("../models/stations-list");
 const uuid = require("uuid");
 
@@ -8,9 +9,17 @@ const stationsList = {
   index (request, response){
     const stationsListId = request.params.id;
     logger.debug('Stations ID = ' + stationsListId);
+
+    //call to stationAnalytics Method (to be changed)
+    const stationsList = fullStationsList.getStations(stationsListId);
+    const lowestPressure = stationAnalytics.getLowestPressure(stationsList);
+    console.log(lowestPressure);
+
     const viewData = {
       title: 'StationsList',
       stations: fullStationsList.getStations(stationsListId),
+      //this is the pass to the view
+      lowestPressure: lowestPressure
     };
     logger.info('About to render', fullStationsList);
     response.render('stationslist', viewData);
