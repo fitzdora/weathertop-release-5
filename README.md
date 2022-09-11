@@ -3,7 +3,7 @@
 /**
 **Name :** Isadora Fitzgerald
 ****Student Number:** W20099887
-VideoLink: https://youtu.be/eDnno0FHiQM** 
+VideoLink: https://youtu.be/eDnno0FHiQM ** 
 
 **Brief description of the App developed 1/2 sentences:**
 
